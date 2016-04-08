@@ -1,0 +1,68 @@
+{
+    "name": "schnittstabil/sugared-sami",
+    "type": "library",
+    "description": "Sami sweetened with ease",
+    "license": "MIT",
+    "keywords": ["sugared", "preconfigured", "sami", "phpdoc"],
+    "authors": [
+        {
+            "name": "Michael Mayer",
+            "email": "michael@schnittstabil.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Schnittstabil\\Sugared\\Sami\\": "src" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Schnittstabil\\Sugared\\Sami\\": "tests" }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/schnittstabil/pdepend.git"
+        }
+    ],
+    "require": {
+        "sami/sami": "^3.2",
+        "schnittstabil/composer-extra": "^0.3.0",
+        "schnittstabil/get": "^2.0"
+    },
+    "require-dev": {
+        "codeclimate/php-test-reporter": "^0.3.0",
+        "fabpot/php-cs-fixer": "^1.10",
+        "halleck45/phpmetrics": "^1.8",
+        "phpmd/phpmd": "^2.3",
+        "pdepend/pdepend": "dev-fix-namespaced-consts-and-functions as 2.0",
+        "satooshi/php-coveralls": "^1.0",
+        "schnittstabil/sugared-phpunit": "^0.3.0",
+        "squizlabs/php_codesniffer": "^2.5"
+    },
+    "extra": {
+        "schnittstabil\/sugared-sami test namespace": {
+            "files": "src",
+            "filter": null,
+            "build_dir": "test-build\/sami",
+            "cache_dir": "test-build\/cache\/sami"
+        }
+    },
+    "bin": [
+        "sugared-sami"
+    ],
+    "scripts": {
+        "clean": "rm -rf build/",
+        "doc": [
+            "./sugared-sami",
+            "phpmetrics --report-html build/phpmetrics/index.html src/"
+        ],
+        "lint": [
+            "phpcs -s --standard=PSR1,PSR2 src/ tests/",
+            "phpmd src text cleancode,codesize,controversial,design,naming,unusedcode",
+            "php-cs-fixer fix --dry-run --diff src",
+            "php-cs-fixer fix --dry-run --diff tests"
+        ],
+        "test": [
+            "sugared-phpunit",
+            "composer lint"
+        ]
+    }
+}
