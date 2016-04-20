@@ -8,11 +8,15 @@ use Schnittstabil\Sugared\Sami\Config\FilterPreprocessor;
 
 class SamiFactory
 {
-    protected $defaultConfig = [
-        'presets' => [
+    protected $defaultConfig;
+
+    public function __construct()
+    {
+        $this->defaultConfig = new \stdClass();
+        $this->defaultConfig->presets = [
             'Schnittstabil\\Sugared\\Sami\\DefaultPreset::get',
-        ],
-    ];
+        ];
+    }
 
     protected function getConfig($namespace)
     {
@@ -26,7 +30,7 @@ class SamiFactory
     public function __invoke($namespace)
     {
         $chain = function ($config) {
-            return new Sami(null, $config);
+            return new Sami(null, (array) $config);
         };
         $chain = new FilterPreprocessor($chain);
 

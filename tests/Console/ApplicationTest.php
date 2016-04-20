@@ -11,15 +11,18 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class ApplicationTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @SuppressWarnings(PHPMD.StaticAccess)
+     */
     protected function clean()
     {
         $defaults = DefaultPreset::get();
-        $fs = new Filesystem();
+        $filesystem = new Filesystem();
         foreach ([
-            $defaults['build_dir'],
-            $defaults['cache_dir'],
+            $defaults->build_dir,
+            $defaults->cache_dir,
         ] as $dir) {
-            $fs->remove($dir);
+            $filesystem->remove($dir);
         }
     }
 

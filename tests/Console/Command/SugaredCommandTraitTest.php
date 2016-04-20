@@ -27,6 +27,8 @@ class SugaredCommandTraitTest extends \PHPUnit_Framework_TestCase
      * @group integration
      * @covers ::initialize
      * @covers Schnittstabil\Sugared\Sami\Console\Command\ParseCommand
+     *
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     public function testExecuteShouldUseDefaultConfigArgument()
     {
@@ -43,9 +45,9 @@ class SugaredCommandTraitTest extends \PHPUnit_Framework_TestCase
         $this->assertObjectHasAttribute('sami', $command);
         $sami = $this->getObjectAttribute($command, 'sami');
         $this->assertInstanceOf(Sami::class, $sami);
-        $this->assertEquals($defaultConfig['build_dir'], $sami['build_dir']);
-        $this->assertEquals($defaultConfig['cache_dir'], $sami['cache_dir']);
-        $this->assertEquals($defaultConfig['files'], $sami['files']);
+        $this->assertEquals($defaultConfig->build_dir, $sami['build_dir']);
+        $this->assertEquals($defaultConfig->cache_dir, $sami['cache_dir']);
+        $this->assertEquals($defaultConfig->files, $sami['files']);
     }
 
     /**

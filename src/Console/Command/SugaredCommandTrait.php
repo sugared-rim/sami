@@ -41,7 +41,7 @@ trait SugaredCommandTrait
         $this->getDefinition()->addOption(
             new InputOption(
                 'namespace',
-                '',
+                null,
                 InputOption::VALUE_REQUIRED,
                 'composer.json/extra namespace',
                 'schnittstabil/sugared-sami'

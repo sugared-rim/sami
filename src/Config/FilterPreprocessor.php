@@ -2,7 +2,7 @@
 
 namespace Schnittstabil\Sugared\Sami\Config;
 
-use function Schnittstabil\Get\getValue;
+use Schnittstabil\Get\Get;
 
 /**
  * Config `filter` chain link.
@@ -16,11 +16,14 @@ class FilterPreprocessor
         $this->next = $next;
     }
 
-    public function __invoke(array $config)
+    /**
+     * @SuppressWarnings(PHPMD.StaticAccess)
+     */
+    public function __invoke($config)
     {
         $next = $this->next;
-        $filter = getValue('filter', $config);
-        unset($config['filter']);
+        $filter = Get::value('filter', $config);
+        unset($config->filter);
 
         if (empty($filter)) {
             return $next($config);

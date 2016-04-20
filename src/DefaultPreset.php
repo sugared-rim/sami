@@ -6,11 +6,12 @@ class DefaultPreset
 {
     public static function get()
     {
-        return [
-            'files' => 'src',
-            'filter' => ProtectedFilter::class,
-            'build_dir' => 'build/sami',
-            'cache_dir' => 'build/cache/sami',
-        ];
+        $config = new \stdClass();
+        $config->files = 'src';
+        $config->filter = ProtectedFilter::class;
+        $config->build_dir = 'build/sami';
+        $config->cache_dir = 'build/cache/sami';
+
+        return $config;
     }
 }
