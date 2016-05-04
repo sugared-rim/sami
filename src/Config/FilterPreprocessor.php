@@ -2,6 +2,7 @@
 
 namespace Schnittstabil\Sugared\Sami\Config;
 
+use stdClass;
 use Schnittstabil\Get\Get;
 
 /**
@@ -19,7 +20,7 @@ class FilterPreprocessor
     /**
      * @SuppressWarnings(PHPMD.StaticAccess)
      */
-    public function __invoke($config)
+    public function __invoke(stdClass $config)
     {
         $next = $this->next;
         $filter = Get::value('filter', $config);
