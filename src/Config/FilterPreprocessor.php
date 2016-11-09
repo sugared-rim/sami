@@ -1,6 +1,6 @@
 <?php
 
-namespace Schnittstabil\Sugared\Sami\Config;
+namespace SugaredRim\Sami\Config;
 
 use stdClass;
 use Schnittstabil\Get\Get;

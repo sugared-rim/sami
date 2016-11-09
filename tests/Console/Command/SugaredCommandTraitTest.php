@@ -1,14 +1,14 @@
 <?php
 
-namespace Schnittstabil\Sugared\Sami\Console\Command;
+namespace SugaredRim\Sami\Console\Command;
 
 use Sami\Sami;
 use Symfony\Component\Console\Tester\CommandTester;
-use Schnittstabil\Sugared\Sami\Console\Application;
-use Schnittstabil\Sugared\Sami\DefaultPreset;
+use SugaredRim\Sami\Console\Application;
+use SugaredRim\Sami\DefaultPreset;
 
 /**
- * @coversDefaultClass \Schnittstabil\Sugared\Sami\Console\Command\SugaredCommandTrait
+ * @coversDefaultClass \SugaredRim\Sami\Console\Command\SugaredCommandTrait
  */
 class SugaredCommandTraitTest extends \PHPUnit_Framework_TestCase
 {
@@ -26,7 +26,7 @@ class SugaredCommandTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @group integration
      * @covers ::initialize
-     * @covers Schnittstabil\Sugared\Sami\Console\Command\ParseCommand
+     * @covers SugaredRim\Sami\Console\Command\ParseCommand
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
      */
@@ -53,7 +53,7 @@ class SugaredCommandTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @group integration
      * @covers ::initialize
-     * @covers Schnittstabil\Sugared\Sami\Console\Command\UpdateCommand
+     * @covers SugaredRim\Sami\Console\Command\UpdateCommand
      */
     public function testExecuteShouldAllowConfigArgument()
     {
@@ -77,7 +77,7 @@ class SugaredCommandTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @group integration
      * @covers ::initialize
-     * @covers Schnittstabil\Sugared\Sami\Console\Command\RenderCommand
+     * @covers SugaredRim\Sami\Console\Command\RenderCommand
      */
     public function testExecuteShouldAllowOnlyVersionOption()
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Schnittstabil\Sugared\Sami;
+namespace SugaredRim\Sami;
 
 use Sami\Sami;
 use Schnittstabil\ComposerExtra\ComposerExtra;
-use Schnittstabil\Sugared\Sami\Config\FilterPreprocessor;
+use SugaredRim\Sami\Config\FilterPreprocessor;
 
 class SamiFactory
 {
@@ -14,7 +14,7 @@ class SamiFactory
     {
         $this->defaultConfig = new \stdClass();
         $this->defaultConfig->presets = [
-            'Schnittstabil\\Sugared\\Sami\\DefaultPreset::get',
+            'SugaredRim\\Sami\\DefaultPreset::get',
         ];
     }
 

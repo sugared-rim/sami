@@ -1,6 +1,6 @@
 <?php
 
-namespace Schnittstabil\Sugared\Sami;
+namespace SugaredRim\Sami;
 
 class SamiFactoryAwareTraitTest extends \PHPUnit_Framework_TestCase
 {

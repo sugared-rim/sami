@@ -1,12 +1,12 @@
 <?php
 
-namespace Schnittstabil\Sugared\Sami\Console;
+namespace SugaredRim\Sami\Console;
 
 use Symfony\Component\Console\Event\ConsoleCommandEvent;
 use Symfony\Component\Console\Tester\ApplicationTester;
 use Symfony\Component\EventDispatcher\EventDispatcher;
-use Schnittstabil\Sugared\Sami\DefaultPreset;
-use Schnittstabil\Sugared\Sami\Console\Command\UpdateCommand;
+use SugaredRim\Sami\DefaultPreset;
+use SugaredRim\Sami\Console\Command\UpdateCommand;
 use Symfony\Component\Filesystem\Filesystem;
 
 class ApplicationTest extends \PHPUnit_Framework_TestCase

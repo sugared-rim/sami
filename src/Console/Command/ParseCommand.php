@@ -1,6 +1,6 @@
 <?php
 
-namespace Schnittstabil\Sugared\Sami\Console\Command;
+namespace SugaredRim\Sami\Console\Command;
 
 use Sami\Sami;
 use Symfony\Component\Console\Input\InputInterface;

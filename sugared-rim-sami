@@ -21,4 +21,4 @@ foreach ([
 
 unset($file);
 
-(new Schnittstabil\Sugared\Sami\Console\Application())->run();
+(new SugaredRim\Sami\Console\Application())->run();

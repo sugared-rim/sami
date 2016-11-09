@@ -1,13 +1,13 @@
 <?php
 
-namespace Schnittstabil\Sugared\Sami\Console\Command;
+namespace SugaredRim\Sami\Console\Command;
 
 use Sami\Sami;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Schnittstabil\Sugared\Sami\SamiFactoryAwareTrait;
+use SugaredRim\Sami\SamiFactoryAwareTrait;
 
 /**
  * We can't extend/modify Sami\Console\Command\Command directly and reuse its subclasses,
@@ -44,7 +44,7 @@ trait SugaredCommandTrait
                 null,
                 InputOption::VALUE_REQUIRED,
                 'composer.json/extra namespace',
-                'schnittstabil/sugared-sami'
+                'sugared-rim/sami'
             )
         );
     }

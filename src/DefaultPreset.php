@@ -1,6 +1,6 @@
 <?php
 
-namespace Schnittstabil\Sugared\Sami;
+namespace SugaredRim\Sami;
 
 class DefaultPreset
 {
