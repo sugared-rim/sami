@@ -6,7 +6,7 @@ use Sami\Sami;
 use Sami\Parser\Filter\DefaultFilter;
 use Sami\Parser\Filter\FilterInterface;
 
-class SamiFactoryTest extends \PHPUnit_Framework_TestCase
+class SamiFactoryTest extends \PHPUnit\Framework\TestCase
 {
     public function testInvokeShouldReturnSamiInstance()
     {

@@ -17,13 +17,13 @@
         "psr-4": { "SugaredRim\\Sami\\": "tests" }
     },
     "require": {
-        "php": ">=5.6.0",
-        "sami/sami": "^3.2",
-        "schnittstabil/composer-extra": "^0.5",
+        "php": ">=7",
+        "sami/sami": "^4.0",
+        "schnittstabil/composer-extra": "^2.0",
         "schnittstabil/get": "^2.0"
     },
     "require-dev": {
-        "sugared-rim/phpunit": "^0.5",
+        "sugared-rim/phpunit": "^6.0",
         "symfony/event-dispatcher": "^3.1"
     },
     "extra": {
@@ -47,10 +47,10 @@
             "sugared-rim-cs"
         ],
         "test": [
-            "sugared-phpunit",
+            "sugared-rim-phpunit",
             "./sugared-rim-sami --help",
             "composer lint"
         ],
-        "travis": "sugared-phpunit"
+        "travis": "sugared-rim-phpunit"
     }
 }

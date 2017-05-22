@@ -10,7 +10,7 @@ use SugaredRim\Sami\DefaultPreset;
 /**
  * @coversDefaultClass \SugaredRim\Sami\Console\Command\SugaredCommandTrait
  */
-class SugaredCommandTraitTest extends \PHPUnit_Framework_TestCase
+class SugaredCommandTraitTest extends \PHPUnit\Framework\TestCase
 {
     /*
      * @covers ::configure
@@ -26,7 +26,7 @@ class SugaredCommandTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @group integration
      * @covers ::initialize
-     * @covers SugaredRim\Sami\Console\Command\ParseCommand
+     * @covers \SugaredRim\Sami\Console\Command\ParseCommand
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
      */
@@ -53,7 +53,7 @@ class SugaredCommandTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @group integration
      * @covers ::initialize
-     * @covers SugaredRim\Sami\Console\Command\UpdateCommand
+     * @covers \SugaredRim\Sami\Console\Command\UpdateCommand
      */
     public function testExecuteShouldAllowConfigArgument()
     {
@@ -77,7 +77,7 @@ class SugaredCommandTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @group integration
      * @covers ::initialize
-     * @covers SugaredRim\Sami\Console\Command\RenderCommand
+     * @covers \SugaredRim\Sami\Console\Command\RenderCommand
      */
     public function testExecuteShouldAllowOnlyVersionOption()
     {

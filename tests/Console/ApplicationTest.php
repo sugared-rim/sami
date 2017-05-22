@@ -9,7 +9,7 @@ use SugaredRim\Sami\DefaultPreset;
 use SugaredRim\Sami\Console\Command\UpdateCommand;
 use Symfony\Component\Filesystem\Filesystem;
 
-class ApplicationTest extends \PHPUnit_Framework_TestCase
+class ApplicationTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @SuppressWarnings(PHPMD.StaticAccess)

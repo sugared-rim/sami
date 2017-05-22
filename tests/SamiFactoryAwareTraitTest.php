@@ -2,7 +2,7 @@
 
 namespace SugaredRim\Sami;
 
-class SamiFactoryAwareTraitTest extends \PHPUnit_Framework_TestCase
+class SamiFactoryAwareTraitTest extends \PHPUnit\Framework\TestCase
 {
     public function setUp()
     {
